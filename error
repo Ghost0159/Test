@@ -1,0 +1,219 @@
+queueSystem.cpp
+In file included from C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/libs/include/SDL/SDL_main.h:26,
+                 from C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/libs/include/SDL/SDL.h:30,
+                 from C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:24:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/libs/include/SDL/SDL_stdinc.h:123:50: error: narrowing conversion of '-1' from 'int' to 'unsigned int' [-Wnarrowing]
+  123 |        typedef int SDL_dummy_ ## name[(x) * 2 - 1]
+      |                                                  ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/libs/include/SDL/SDL_stdinc.h:151:1: note: in expansion of macro 'SDL_COMPILE_TIME_ASSERT'
+  151 | SDL_COMPILE_TIME_ASSERT(enum, sizeof(SDL_DUMMY_ENUM) == sizeof(int));
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/libs/include/SDL/SDL_stdinc.h:123:47: error: size '-1' of array 'SDL_dummy_enum' is negative
+  123 |        typedef int SDL_dummy_ ## name[(x) * 2 - 1]
+      |                                       ~~~~~~~~^~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/libs/include/SDL/SDL_stdinc.h:151:1: note: in expansion of macro 'SDL_COMPILE_TIME_ASSERT'
+  151 | SDL_COMPILE_TIME_ASSERT(enum, sizeof(SDL_DUMMY_ENUM) == sizeof(int));
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:48:44: error: 'int QueueSystem::downloadThread(void*)' should have been declared inside 'QueueSystem'
+   48 | int QueueSystem::downloadThread(void * data) {
+      |                                            ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'int QueueSystem::downloadThread(void*)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:75:35: error: 'struct QueueSystemDownloadInfo' has no member named 'callback'
+   75 |                         if(!info->callback(info->buffer, info->bufferSize, info->progress, info->size)) {
+      |                                   ^~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:89:23: error: 'struct QueueSystemDownloadInfo' has no member named 'callback'
+   89 |                 info->callback(info->buffer, info->bufferOffset, info->progress, info->size);
+      |                       ^~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:101:1: error: ISO C++ forbids declaration of 'QueueSystem' with no type [-fpermissive]
+  101 | QueueSystem::QueueSystem() : m_threads(nullptr), m_numThreads(0) {
+      | ^~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:101:26: error: 'int QueueSystem::QueueSystem()' should have been declared inside 'QueueSystem'
+  101 | QueueSystem::QueueSystem() : m_threads(nullptr), m_numThreads(0) {
+      |                          ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:101:26: error: 'int QueueSystem::QueueSystem()' conflicts with a previous declaration
+In file included from C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:22:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/include/utils/queueSystem.hpp:53:11: note: previous declaration 'namespace QueueSystem { }'
+   53 | namespace QueueSystem {
+      |           ^~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'int QueueSystem::QueueSystem()':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:101:30: error: only constructors take member initializers
+  101 | QueueSystem::QueueSystem() : m_threads(nullptr), m_numThreads(0) {
+      |                              ^~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:103:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  103 | }
+      | ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:105:14: error: scope 'QueueSystem' before '~' is not a class-name
+  105 | QueueSystem::~QueueSystem() {
+      |              ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:115:38: error: 'bool QueueSystem::init(int)' should have been declared inside 'QueueSystem'
+  115 | bool QueueSystem::init(int numThreads) {
+      |                                      ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'bool QueueSystem::init(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:117:12: error: 'm_threads' was not declared in this scope
+  117 |         if(m_threads != nullptr) {
+      |            ^~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:122:9: error: 'm_numThreads' was not declared in this scope; did you mean 'numThreads'?
+  122 |         m_numThreads = numThreads;
+      |         ^~~~~~~~~~~~
+      |         numThreads
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:123:9: error: 'm_threads' was not declared in this scope
+  123 |         m_threads = new SDL_Thread*[m_numThreads];
+      |         ^~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:133:209: error: 'bool QueueSystem::startDownload(TCPsocket, uint64_t, uint64_t, uint64_t, void (*)(const char*, uint64_t, uint64_t, uint64_t), uint64_t)' should have been declared inside 'QueueSystem'
+  133 | bool QueueSystem::startDownload(TCPsocket socket, uint64_t start, uint64_t end, uint64_t size, void (*callback)(const char * buffer, uint64_t bufferSize, uint64_t progress, uint64_t total), uint64_t chunkSize) {
+      |                                                                                                                                                                                                                 ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'bool QueueSystem::startDownload(TCPsocket, uint64_t, uint64_t, uint64_t, void (*)(const char*, uint64_t, uint64_t, uint64_t), uint64_t)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:141:28: error: 'm_numThreads' was not declared in this scope
+  141 |         for(int i = 0; i < m_numThreads; i++) {
+      |                            ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:142:20: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  142 |                 if(m_threads[i] == nullptr) {
+      |                    ^~~~~~~~~
+      |                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:170:15: error: 'struct QueueSystemDownloadInfo' has no member named 'callback'
+  170 |         info->callback = callback;
+      |               ^~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:173:9: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  173 |         m_threads[threadIndex] = SDL_CreateThread(QueueSystem::downloadThread, "DownloadThread", info);
+      |         ^~~~~~~~~
+      |         Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:173:64: error: 'downloadThread' is not a member of 'QueueSystem'; did you mean 'QueueSystem::downloadThread'?
+  173 |         m_threads[threadIndex] = SDL_CreateThread(QueueSystem::downloadThread, "DownloadThread", info);
+      |                                                                ^~~~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:48:5: note: 'QueueSystem::downloadThread' declared here
+   48 | int QueueSystem::downloadThread(void * data) {
+      |     ^~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:178:45: error: 'bool QueueSystem::isComplete(int)' should have been declared inside 'QueueSystem'
+  178 | bool QueueSystem::isComplete(int threadIndex) {
+      |                                             ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'bool QueueSystem::isComplete(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:179:46: error: 'm_numThreads' was not declared in this scope
+  179 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:183:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  183 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:188:84: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  188 |         QueueSystemDownloadInfo * info = (QueueSystemDownloadInfo*)SDL_GetThreadID(m_threads[threadIndex]);
+      |                                                                                    ^~~~~~~~~
+      |                                                                                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:194:43: error: 'bool QueueSystem::hasError(int)' should have been declared inside 'QueueSystem'
+  194 | bool QueueSystem::hasError(int threadIndex) {
+      |                                           ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'bool QueueSystem::hasError(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:195:46: error: 'm_numThreads' was not declared in this scope
+  195 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:199:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  199 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:204:84: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  204 |         QueueSystemDownloadInfo * info = (QueueSystemDownloadInfo*)SDL_GetThreadID(m_threads[threadIndex]);
+      |                                                                                    ^~~~~~~~~
+      |                                                                                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:210:44: error: 'bool QueueSystem::isRunning(int)' should have been declared inside 'QueueSystem'
+  210 | bool QueueSystem::isRunning(int threadIndex) {
+      |                                            ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'bool QueueSystem::isRunning(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:211:46: error: 'm_numThreads' was not declared in this scope
+  211 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:215:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  215 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:220:84: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  220 |         QueueSystemDownloadInfo * info = (QueueSystemDownloadInfo*)SDL_GetThreadID(m_threads[threadIndex]);
+      |                                                                                    ^~~~~~~~~
+      |                                                                                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:226:50: error: 'uint64_t QueueSystem::getProgress(int)' should have been declared inside 'QueueSystem'
+  226 | uint64_t QueueSystem::getProgress(int threadIndex) {
+      |                                                  ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'uint64_t QueueSystem::getProgress(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:227:46: error: 'm_numThreads' was not declared in this scope
+  227 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:231:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  231 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:236:84: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  236 |         QueueSystemDownloadInfo * info = (QueueSystemDownloadInfo*)SDL_GetThreadID(m_threads[threadIndex]);
+      |                                                                                    ^~~~~~~~~
+      |                                                                                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:242:47: error: 'uint64_t QueueSystem::getStart(int)' should have been declared inside 'QueueSystem'
+  242 | uint64_t QueueSystem::getStart(int threadIndex) {
+      |                                               ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'uint64_t QueueSystem::getStart(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:243:46: error: 'm_numThreads' was not declared in this scope
+  243 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:247:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  247 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:252:84: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  252 |         QueueSystemDownloadInfo * info = (QueueSystemDownloadInfo*)SDL_GetThreadID(m_threads[threadIndex]);
+      |                                                                                    ^~~~~~~~~
+      |                                                                                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:258:45: error: 'uint64_t QueueSystem::getEnd(int)' should have been declared inside 'QueueSystem'
+  258 | uint64_t QueueSystem::getEnd(int threadIndex) {
+      |                                             ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'uint64_t QueueSystem::getEnd(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:259:46: error: 'm_numThreads' was not declared in this scope
+  259 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:263:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  263 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:268:84: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  268 |         QueueSystemDownloadInfo * info = (QueueSystemDownloadInfo*)SDL_GetThreadID(m_threads[threadIndex]);
+      |                                                                                    ^~~~~~~~~
+      |                                                                                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:274:46: error: 'uint64_t QueueSystem::getSize(int)' should have been declared inside 'QueueSystem'
+  274 | uint64_t QueueSystem::getSize(int threadIndex) {
+      |                                              ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'uint64_t QueueSystem::getSize(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:275:46: error: 'm_numThreads' was not declared in this scope
+  275 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:279:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  279 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:284:84: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  284 |         QueueSystemDownloadInfo * info = (QueueSystemDownloadInfo*)SDL_GetThreadID(m_threads[threadIndex]);
+      |                                                                                    ^~~~~~~~~
+      |                                                                                    Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: At global scope:
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:290:52: error: 'void QueueSystem::waitUntilComplete(int)' should have been declared inside 'QueueSystem'
+  290 | void QueueSystem::waitUntilComplete(int threadIndex) {
+      |                                                    ^
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp: In function 'void QueueSystem::waitUntilComplete(int)':
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:291:46: error: 'm_numThreads' was not declared in this scope
+  291 |         if(threadIndex < 0 || threadIndex >= m_numThreads) {
+      |                                              ^~~~~~~~~~~~
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:295:12: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  295 |         if(m_threads[threadIndex] == nullptr) {
+      |            ^~~~~~~~~
+      |            Thread
+C:/Users/Ghost0159/Documents/GitHub/Ghost-Eshop-Alternative-3DS/source/utils/queueSystem.cpp:301:24: error: 'm_threads' was not declared in this scope; did you mean 'Thread'?
+  301 |         SDL_WaitThread(m_threads[threadIndex], &status);
+      |                        ^~~~~~~~~
+      |                        Thread
+make[1]: *** [/opt/devkitpro/devkitARM/base_rules:80: queueSystem.o] Error 1
+make: *** [Makefile:227: all] Error 2
+Appuyez sur une touche pour continuer...
